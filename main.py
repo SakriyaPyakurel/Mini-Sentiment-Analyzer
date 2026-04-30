@@ -41,7 +41,7 @@ def generate_csv(request:csv_generator_request):
     if len(predictions) == 0:
         raise HTTPException(status_code=400,detail='No predictions available to save') 
     else:
-        pathname = re.sub(r'[^a-zA-Z0-9_.-]', '_', request.pathname)
+        pathname = re.sub(r'[^a-zA-Z0-9_.-]', '_', request.pathname) if request.pathname else 'output_file.csv'
         filename = os.path.basename(pathname) 
         filepath = os.path.join(BASE_DIR,filename)
         if not filepath.endswith('.csv'):

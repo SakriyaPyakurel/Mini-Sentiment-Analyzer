@@ -7,7 +7,7 @@ class PredictionResponse(BaseModel):
     predictions:list[int]
 
 class csv_generator_request(BaseModel):
-    pathname:str 
+    pathname:str|None
 
 class csv_generator_response(BaseModel):
     message:str
