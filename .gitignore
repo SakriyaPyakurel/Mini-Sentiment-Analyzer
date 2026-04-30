@@ -1,0 +1,7 @@
+venv/
+outputs/
+__pycache__/
+text_classifier_model.pkl
+*.pyc
+*.pyo
+*.pyd
