@@ -33,6 +33,4 @@ class TextClassifier:
         joblib.dump(self.model,path_name)
     def load(self,path_name:str='model.pkl'):
         self.model = joblib.load(path_name) 
-        self.is_trained = True 
-
-    
+        self.is_trained = True     
